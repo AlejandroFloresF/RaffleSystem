@@ -1,0 +1,283 @@
+
+@media only screen and (max-width: 576px) {
+    .burger {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+      }
+      .burger input {
+        display: none;
+      }
+      
+      .burger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 80%;
+        background: rgb(255, 255, 255);
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+      }
+      
+      .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+      }
+      
+      .burger input:checked ~ span:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 5px;
+      }
+      
+      .burger input:checked ~ span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      
+      .burger input:checked ~ span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 23px;
+        left: 5px;
+      }
+
+      .Menu-open {
+        width: 200px;
+        height: 100px;
+        background-color: green;
+        display: flex;
+      }
+      .navbar-menu {
+        display: none;
+        position: absolute;
+        width: 15rem;
+        height: auto;
+        right: 1rem;
+        top: 7vh;
+        background-color: #222325;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      .navbar-menu li{
+        display: flex;
+        padding: 1%;
+        justify-content: center;
+        
+      }
+      .navbar-menu li a{
+        --bg: #000;
+        --hover-bg: #f0ba0b;
+        --hover-text: #000000;
+        color: #fff;
+        font-size: 1.8rem;
+        padding: 10%;
+        width: 90%;
+        transition: 0.2s;
+        text-decoration: none;
+        text-align: start;
+      } 
+      .navbar-menu li a:hover{
+        color: #000000;
+        transform: translate(-0.25rem,-0.25rem);
+        background: var(--hover-bg);
+        box-shadow: 0.30rem 0.30rem var(--bg);
+
+      }
+      .Menu-close {
+        display: none;
+        animation-duration: 0.5s;
+        animation-name: disappear;
+      }
+
+      .Menu-open {
+        display: block;
+        animation-duration: 0.5s;
+        animation-name: appear;
+      }
+      @keyframes appear {
+        from {
+          opacity: 0%;
+        }
+      
+        to {
+          opacity: 100%;
+        }
+      }
+
+      @keyframes disappear {
+        from {
+          opacity: 100%;
+        }
+      
+        to {
+          opacity: 0%;
+        }
+      }
+
+  }
+  @media only screen and (min-width: 576px) {
+
+    .burger {
+        position: relative;
+        width: 40px;
+        height: 30px;
+        background: transparent;
+        cursor: pointer;
+        display: block;
+      }
+      .burger input {
+        display: none;
+      }
+      
+      .burger span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+      }
+      
+      .burger span:nth-of-type(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        transform-origin: left center;
+      }
+      
+      .burger span:nth-of-type(3) {
+        top: 100%;
+        transform-origin: left center;
+        transform: translateY(-100%);
+      }
+      
+      .burger input:checked ~ span:nth-of-type(1) {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 5px;
+      }
+      
+      .burger input:checked ~ span:nth-of-type(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      
+      .burger input:checked ~ span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+        left: 5px;
+      }
+      .navbar-menu {
+        display: none;
+        position: absolute;
+        width: 20rem;
+        right: 2rem;
+        top: 7vh;
+        background-color: #222325;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        list-style: none;
+        text-decoration: none;
+      }
+
+      .navbar-menu li{
+        display: flex;
+        padding: 1%;
+        justify-content: center;
+        
+      }
+      .navbar-menu li a{
+        --bg: #000;
+        --hover-bg: #f0ba0b;
+        --hover-text: #000000;
+        color: #fff;
+        font-size: 1.8rem;
+        padding: 10%;
+        width: 90%;
+        transition: 0.2s;
+        text-decoration: none;
+        text-align: start;
+      } 
+      .navbar-menu li a:hover{
+        color: #000000;
+        transform: translate(-0.25rem,-0.25rem);
+        background: var(--hover-bg);
+        box-shadow: 0.30rem 0.30rem var(--bg);
+
+      }
+      .Menu-close {
+        display: none;
+        animation-name: disappear;
+        animation-duration: 0.5s;
+      }
+
+      .Menu-open {
+        display: block;
+        animation-duration: 0.5s;
+        animation-name: appear;
+      }
+    
+      .navbar-menu li a:active {
+        transform: translate(0);
+        box-shadow: none;
+      }
+
+      @keyframes appear {
+        from {
+          opacity: 0%;
+        }
+      
+        to {
+          opacity: 100%;
+        }
+      }
+
+      @keyframes disappear {
+        from {
+          opacity: 100%;
+        }
+      
+        to {
+          opacity: 0%;
+        }
+      }
+    }
+  
+  
+  
+ 
