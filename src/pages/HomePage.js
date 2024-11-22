@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import RaffleElement from '../components/common/RaffleElement.js';
+import '../assets/styles/HomePage.css'
+ 
 
 const HomePage = () => {
   // State para almacenar los datos de las rifas
@@ -34,31 +36,21 @@ const HomePage = () => {
   }
 
   return (
-    <div className="main-galery-container">
+    <div className="main-homePage-container">
       <Navbar />
-      <section className="main-galery-container--slider">
-        <ul className="photos-container--slider">
+        <div className='main-homePage-raffles-scroll'>
           {raffles.length > 0 ? (
             raffles.map((raffle, index) => (
-            console.log(raffle[2]),
-              <div key={index}>
-                <h2>{raffle.name}</h2> {/* Nombre de la rifa */}
-                <p>{raffle.description}</p> {/* Descripción de la rifa */}
-                <p><strong>Premio:</strong> {raffle.prize}</p> {/* Premio */}
-                <p><strong>Costo del boleto:</strong> ${raffle.ticketCost}</p> {/* Costo del boleto */}
-                <p><strong>Fecha de inicio:</strong> {new Date(raffle.startDate).toLocaleDateString()}</p> {/* Fecha de inicio */}
-                <p><strong>Fecha de fin:</strong> {new Date(raffle.endDate).toLocaleDateString()}</p> {/* Fecha de fin */}
-                {/* Puedes agregar más información si lo necesitas */}
+              <div key={index} className=''>
                 <RaffleElement key={raffle.id} raffle={raffle} />
               </div>
             ))
           ) : (
-            <p>No hay rifas disponibles.</p> // Mensaje cuando no hay rifas
+            <p>No hay rifas disponibles.</p> 
           )}
-        </ul>
-      </section>
-      <Footer />
-    </div>
+        </div>
+    <Footer />
+  </div>
   );
 };
 

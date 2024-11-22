@@ -1,0 +1,86 @@
+.raffle-element {
+    width: 80vw;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+  }
+  
+  .raffle-element:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .raffle-element h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .buy-ticket-button,
+  .luck-wheel-button,
+  .toggle-tickets-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .buy-ticket-button {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .buy-ticket-button:hover {
+    background-color: #45a049;
+  }
+  
+  .luck-wheel-button {
+    background-color: #008cba;
+    color: white;
+  }
+  
+  .luck-wheel-button:hover {
+    background-color: #007bb5;
+  }
+  
+  .toggle-tickets-button {
+    margin-top: 15px;
+    background-color: #ffa500;
+    color: white;
+  }
+  
+  .toggle-tickets-button:hover {
+    background-color: #e59400;
+  }
+  
+  .tickets-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .ticket-box {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  .ticket-box:hover {
+    transform: scale(1.05);
+    background-color: #e6f7ff;
+  }
+  

@@ -1,0 +1,9 @@
+.main-homePage-container {
+    background-color: #F5F5F5;
+}
+
+.main-homePage-raffles-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
