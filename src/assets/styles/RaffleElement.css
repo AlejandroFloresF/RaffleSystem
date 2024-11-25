@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+
+
 .raffle-element {
     width: 80vw;
     border: 1px solid #ddd;
@@ -66,21 +69,30 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   .ticket-box {
-    padding: 15px;
-    border: 1px solid #ddd;
+    
+    padding: 5px;
     border-radius: 5px;
     text-align: center;
-    background-color: #ffffff;
     transition: transform 0.2s, background-color 0.2s;
     cursor: pointer;
   }
+
   
+  .text-ticket {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 3px; 
+    fill: black; 
+    font-weight: bold;   
+  }
   .ticket-box:hover {
     transform: scale(1.05);
     background-color: #e6f7ff;
   }
   
+
+
+ 
