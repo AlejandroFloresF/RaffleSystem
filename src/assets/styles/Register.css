@@ -1,0 +1,76 @@
+/* Estilos generales del Register */
+.register-container {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .register-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .register-form h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .register-form div {
+    margin-bottom: 15px;
+  }
+  
+  .register-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .register-form input:focus {
+    border-color: #28a745;
+    outline: none;
+  }
+  
+  .register-form button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .register-form button:hover {
+    background-color: #218838;
+  }
+  
+  .register-form p {
+    text-align: center;
+  }
+  
+  .register-form p[style*="color: green"] {
+    color: green;
+  }
+  
+  .register-form p[style*="color: red"] {
+    color: red;
+  }
+  
