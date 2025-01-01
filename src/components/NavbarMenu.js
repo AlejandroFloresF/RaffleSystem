@@ -39,7 +39,7 @@ const NavbarMenu = () => {
         {userInfo ? (
           <>
             <li><Link to="/perfil">Mi Perfil ({userInfo.sub})</Link></li>
-            {userInfo.role === "admin" && <li><Link to="/admin">Admin Panel</Link></li>}
+            {userInfo.role == null  && <li><Link to="/adminPanel">Admin Panel</Link></li>}
             <li>
               <button
                 onClick={() => {

@@ -1,0 +1,25 @@
+.admin-panel-container {
+  width: 100vw;
+  height: 100vh;
+}
+  
+.raffles-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+  
+.raffle-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+  
+.edit-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+  

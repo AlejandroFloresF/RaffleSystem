@@ -6,33 +6,30 @@ import '../assets/styles/HomePage.css'
  
 
 const HomePage = () => {
-  // State para almacenar los datos de las rifas
   const [raffles, setRaffles] = useState([]);
-  const [loading, setLoading] = useState(true); // Para mostrar un mensaje de carga mientras se obtienen los datos
-  const [error, setError] = useState(null); // Para manejar errores
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
-  // Hook useEffect para realizar el fetch al cargar el componente
   useEffect(() => {
-    // Realizar fetch a la API
     fetch('http://localhost:8080/api/v1/raffles')
-      .then((response) => response.json()) // Convertir la respuesta en JSON
+      .then((response) => response.json()) 
       .then(data => {
-        setRaffles(data); // Guardar los datos en el state
-        setLoading(false); // Desactivar el estado de carga
+        setRaffles(data); 
+        setLoading(false); 
       })
       .catch(error => {
-        console.error('Error al obtener las rifas:', error); // Manejar cualquier error
-        setError('Error al cargar las rifas.'); // Establecer un mensaje de error
-        setLoading(false); // Desactivar el estado de carga
+        console.error('Error al obtener las rifas:', error); 
+        setError('Error al cargar las rifas.'); 
+        setLoading(false); 
       });
-  }, []); // El array vacío [] asegura que el fetch solo se ejecute una vez al cargar el componente
+  }, []); 
 
   if (loading) {
-    return <div>Loading...</div>; // Mostrar un mensaje de carga mientras los datos se obtienen
+    return <div>Loading...</div>; 
   }
 
   if (error) {
-    return <div>{error}</div>; // Mostrar un mensaje de error si algo salió mal
+    return <div>{error}</div>;
   }
 
   return (
